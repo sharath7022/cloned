@@ -1,4 +1,59 @@
-#include <stdio.h>
+import tkinter as tk
+
+def show_choice():
+    selected = var.get()
+    label.config(text=f"You selected: {selected}")
+
+# Create main window
+root = tk.Tk()
+root.title("Radio Button Example")
+
+# Variable to store selected value
+var = tk.StringVar(value="Python")  # Default value
+
+# Create radio buttons
+languages = ["Python", "C", "Java", "JavaScript"]
+
+for lang in languages:
+    rb = tk.Radiobutton(root, text=lang, variable=var, value=lang, command=show_choice)
+    rb.pack(anchor='w')
+
+# Label to show selected choice
+label = tk.Label(root, text="You selected: Python")
+label.pack(pady=10)
+
+root.mainloop()#include <stdio.h>
+
+int main() {
+    int choice;
+
+    printf("Choose your favorite programming language:\n");
+    printf("1. C\n");
+    printf("2. Python\n");
+    printf("3. Java\n");
+    printf("4. JavaScript\n");
+    printf("Enter your choice (1-4): ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("You selected C.\n");
+            break;
+        case 2:
+            printf("You selected Python.\n");
+            break;
+        case 3:
+            printf("You selected Java.\n");
+            break;
+        case 4:
+            printf("You selected JavaScript.\n");
+            break;
+        default:
+            printf("Invalid choice.\n");
+    }
+
+    return 0;
+}#include <stdio.h>
 
 int main() {
     double n1 = 0.0, n2 = 0.0, result = 0.0;
